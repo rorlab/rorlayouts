@@ -1,20 +1,25 @@
-<h1>Listing posts</h1>
+<% content_for :action_content do %>
+  <div class="action_layout">
+    <span class="hint">action layout</span>
+    <h1>Listing posts</h1>
 
-<table class="bordered">
-  <tr>
-    <th>Title</th>
-    <th>Content</th>
-    <th>Actions</th>
+    <table class="bordered">
+      <tr>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Actions</th>
 
-  </tr>
+      </tr>
 
-  <% @posts.each do |post| %>
-    <%= render post, :layout => "row_template" %> 
-    <!-- , :spacer_template => "post_spacer" -->
-  <% end %>
+      <% @posts.each do |post| %>
+        <%= render post, :layout => "row_template" %> 
+        <!-- , :spacer_template => "post_spacer" -->
+      <% end %>
 
-</table>
+    </table>
 
-<br />
+    <br />
 
-<%= link_to 'New Post', new_post_path %>
+    <%= link_to 'New Post', new_post_path %>
+  </div>
+<% end %>
