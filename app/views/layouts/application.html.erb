@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog, ROR Lab. Lecture</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="header">
+  <h1><%= link_to "ROR Lab., Season 2", root_path %></h1>
+  <small>Layouts and Rendering in Rails</small>
+</div>
+
+<div id="trunk">
+  <div id="main_page">
+    <span class="hint">application layout</span>
+    <%= content_for?(:content) ? yield(:content) : yield %>
+  </div>
+</div>
+
+<div id="footer">
+  - Webinar for RailsGuide on <%= Date.today %> -
+</div>
+
+</body>
+</html>

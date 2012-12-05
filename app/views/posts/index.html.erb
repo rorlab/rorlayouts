@@ -1,0 +1,20 @@
+<h1>Listing posts</h1>
+
+<table class="bordered">
+  <tr>
+    <th>Title</th>
+    <th>Content</th>
+    <th>Actions</th>
+
+  </tr>
+
+  <% @posts.each do |post| %>
+    <%= render post, :layout => "row_template" %> 
+    <!-- , :spacer_template => "post_spacer" -->
+  <% end %>
+
+</table>
+
+<br />
+
+<%= link_to 'New Post', new_post_path %>

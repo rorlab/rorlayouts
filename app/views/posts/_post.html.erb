@@ -1,0 +1,15 @@
+<% content_for "post_title_#{post.id}" do %>
+  <%= post.title %>
+<% end %>
+
+<% content_for "post_content_#{post.id}" do %>
+  <%= post.content %>
+<% end %>
+
+<% content_for "post_action_#{post.id}" do %>
+  <%= link_to 'Show', post %> |
+  <%= link_to 'Edit', edit_post_path(post) %> |<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
+
+
+
