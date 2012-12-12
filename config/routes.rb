@@ -1,10 +1,10 @@
 Rorlayouts::Application.routes.draw do
 
-  resources :books
+  devise_for :users
 
-
-  root :to => "posts#index"
+  root :to => "home#index"
   resources :posts
+  resources :books
 
 
   # The priority is based upon order of creation:

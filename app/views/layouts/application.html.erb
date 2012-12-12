@@ -11,6 +11,15 @@
 <div id="header">
   <h1><%= link_to "ROR Lab., Season 2", root_path %></h1>
   <small>Layouts and Rendering in Rails</small>
+  <div id="login_status">
+    <% if user_signed_in? %>
+      <%= link_to current_user.email, edit_user_registration_path %> |
+      <%= link_to "logout", destroy_user_session_path, method: :delete, data:{:confirma => "Are you sure?"} %>
+    <% else %>
+      <%= link_to "login", new_user_session_path %> |
+      <%= link_to "sign up", new_user_registration_path %>
+    <% end %>
+  </div>
 </div>
 
 <div id="trunk">

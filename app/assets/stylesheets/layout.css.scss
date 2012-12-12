@@ -5,18 +5,21 @@ body {
 #header {
   margin:0 auto;
   width:80%;
-  text-align: right;
+  // text-align: right;
+  position:relative;
+  color:#5E9DC8;
+  a {
+    color:#5E9DC8;
+    font-style: italic;
+    text-decoration: none;
+    &:hover {
+      color:white;
+      text-decoration: none;
+      background-color: transparent;
+    }
+  }
   h1 {   
     margin-bottom:5px;
-    a {
-      color:#5E9DC8;
-      font-style: italic;
-      text-decoration: none;
-      &:hover {
-        text-decoration: none;
-        background-color: transparent;
-      }
-    }
   }
   small {
     color:#5E9DC8;
@@ -44,7 +47,7 @@ body {
   text-align: center;
 }
 
-.controller_layout, .action_layout {
+.container_layout {
   position:relative;
   border:1px dashed #004080;
   padding:30px 40px;

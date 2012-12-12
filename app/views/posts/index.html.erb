@@ -1,6 +1,6 @@
-<% content_for :action_content do %>
-  <div class="action_layout">
-    <span class="hint">action layout</span>
+<% content_for :posts_content do %>
+  <div class="container_layout">
+    <span class="hint">posts#index action layout</span>
     <h1>Listing posts</h1>
 
     <table class="bordered">
@@ -11,15 +11,13 @@
 
       </tr>
 
-      <% @posts.each do |post| %>
-        <%= render post %> 
-        <!-- , :spacer_template => "post_spacer" -->
-      <% end %>
+      <%= render @posts %> 
 
     </table>
 
     <br />
 
-    <%= link_to 'New Post', new_post_path %>
+    <%= link_to 'New Post', new_post_path %> |
+    <%= link_to 'Home', root_path %>
   </div>
 <% end %>
