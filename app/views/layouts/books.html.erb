@@ -1,3 +1,4 @@
+<% content_for :content do %>
 <div class="container_layout">
   <span class="hint">books controller layout</span>
   <%= content_for?(:books_content) ? yield(:books_content) : yield %>
